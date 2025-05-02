@@ -1,57 +1,24 @@
-# React + TypeScript + Vite
+# Front-learning
+Personal projects for enhance front end developing skills.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Challenge 2: Optimized Product Catalog with Infinite Scroll
+**Level:** Mid-Junior / Early-Mid
+**Focus:** API consumption, state management, performance, accessibility.
 
-Currently, two official plugins are available:
+### Requirements:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✅ Build a product catalog using React that fetches data from an API (e.g., FakeStore API).
 
-## Expanding the ESLint configuration
+✅ Implement infinite scroll instead of pagination (load more products when scrolling down).
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+✅ Optimize performance by caching API responses (use React Context, Zustand, or SWR).
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+✅ Add accessibility features like keyboard navigation and proper ARIA attributes.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+✅ Use lazy loading for images to improve performance.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+✅ Deploy your app (e.g., Vercel, Netlify) and share the link.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
-In addition, it has integrated the following packages:
-- SASS: CSS preprocessor for .scss files and modules
-- Axios: For endpoints fetching 
+**Bonus Challenges (Optional but Recommended):**
+🔹 Filter & Sort: Allow users to filter products by category and sort by price.
+🔹 Skeleton Loading: Improve UX by adding skeleton loaders instead of blank spaces.
